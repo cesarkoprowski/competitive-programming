@@ -7,6 +7,6 @@ int main () {
     cin >> r;
     r = r * r;
     a = pi * r;
-    printf("A=%.4lf", a);
+    printf("A=%.4lf\n", a);
     return 0;
 }

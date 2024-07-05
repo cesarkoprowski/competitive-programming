@@ -2,21 +2,10 @@
 
 using namespace std;
 
-typedef struct especification {
-    int hours;
-    int speed;
-    double consumption;
-} Especification;
-
-void fuelSpent(Especification valueFL);
-
 int main() {
-    Especification value;
-    cin >> value.hours >> value.speed >> value.consumption;
-    fuelSpent(value);
+    double hours, speed, consumption;
+    cin >> hours >> speed;
+    consumption = (hours*speed)/12;
+    printf("%.3lf\n", (hours*speed)/12);
     return 0;
-}
-
-void fuelSpent(Especification valueFL) {
-    printf("%.3lf\n", (valueFL.hours * valueFL.speed) / valueFL.consumption);
 }
