@@ -4,35 +4,31 @@
 
 using namespace std;
 
-void calculateNotes(float value);
+void calculateNotes(double value);
 
 int main() {
-    float value;
-    while(true) {
-        cin >> value;
-        if (value >= 0) {
-            break;
-        }
-    }
+    double value;
+    cin >> value;
     calculateNotes(value);
     return 0;
 }
 
-void calculateNotes(float value) {
+void calculateNotes(double value) {
+    float notes[6] = {100.00, 50.00, 20.00, 10.00, 5.00, 2.00};
+    float coins[6] = {1.00, 0.50, 0.25, 0.10, 0.05, 0.01}; 
+    int intValue;
+    cout << fixed << setprecision(2);
     cout << "NOTAS:" << endl;
-    int notes[] = {100, 50, 20, 10, 5, 2};
-    for (int note : notes) {
-        int count = value / note;
-        cout << count << " nota(s) de R$ " << note << ".00" << endl;
-        value -= count * note;
+    for (int i = 0; i < 6; i++) {
+        int aux = value / notes[i];
+        value -= aux * notes[i];
+        cout << aux << " nota(s) de R$ " << notes[i] << endl; 
     }
-    value = round(value * 100);
-    value = value / 100;
-    cout << "MOEDAS:";
-    float coins[] = {1.00, 0.50, 0.25, 0.10, 0.05, 0.01};
-    for (float coin : coins) {
-        int count = value / coin;
-        cout << "\n" << count << " moeda(s) de R$ " << fixed << setprecision(2) << coin;
-        value -= count * coin;
+    cout << "MOEDAS:" << endl;
+    intValue = value * 100;
+    for (int i = 0; i < 6; i++) {
+        int aux = intValue / (coins[i]*100);
+        intValue -= aux * (coins[i]*100);
+        cout << aux << " moeda(s) de R$ " << coins[i] << endl; 
     }
 }
