@@ -16,7 +16,7 @@ int main() {
 
 void verify_triangle(float a, float b, float c) {
     int aux;
-    if (((b + c) > a) && (b - c) < a) {
+    if (((b + c) > a) && ((b - c) < a)) {
         perimeter(a, b, c);
     } else {
         area_of_trapezium(a, b, c);
