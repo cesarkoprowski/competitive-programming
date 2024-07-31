@@ -1,2 +1,2 @@
 # beecrowd-exercises
-Este repositório contém soluções para os exercícios de programação da plataforma Beecrowd, implementadas em C++.
+This repository contains solutions to programming exercises from the Beecrowd platform, implemented in C++.
