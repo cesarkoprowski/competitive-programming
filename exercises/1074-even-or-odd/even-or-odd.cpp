@@ -3,13 +3,13 @@
 using namespace std;
 
 int main() {
-    int n;
+    int n, i = 0;
     int v[10000];
     cin >> n;
-    for (int i = 0; i < n; i++) {
+    for (i = 0; i < n; i++) {
         cin >> v[i];
     }
-    for (int i = 0; i < n; i++) {
+    for (i = 0; i < n; i++) {
         if (!v[i]) {
             cout << "NULL" << endl;
         } else if (!(v[i] % 2)) {
@@ -28,4 +28,5 @@ int main() {
             }        
         }
     }
+    return 0;
 }
