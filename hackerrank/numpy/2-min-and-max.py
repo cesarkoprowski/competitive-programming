@@ -2,13 +2,13 @@ import numpy as np
 
 n, m = map(int, input().split())
 
-my_array = np.zeros((n, m))
+v = np.zeros((n, m))
 
 for i in range(n):
     linha = list(map(int, input().split()))
-    my_array[i, :] = linha  
+    v[i, :] = linha  
 
-my_array_sum = np.sum(my_array, axis=0)
-count = np.prod(my_array_sum, axis=None)
+vmin = np.min(v, axis=1)
+count = np.max(vmin)
 
 print(f"{count:.0f}")
