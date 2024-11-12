@@ -1,5 +1,4 @@
-#include <bits/stdc++.h>
-
+#include <iostream>
 using namespace std;
 
 int main() {
@@ -9,17 +8,11 @@ int main() {
         for (int j = 0; j < 5; j++) {
             cin >> m[i][j];
             if (m[i][j] == 1) {
-                ai = i - 2;
-                aj = j - 2;
-                if (ai < 0) {
-                    ai *= -1;
-                }
-                if (aj < 0) {
-                    aj *= -1;
-                }
+                ai = i;
+                aj = j;
             }
         }
     }
-    cout << (ai + aj) << endl;
+    cout << (abs(ai - 2) + abs(aj - 2)) << endl;
     return 0;
 }
