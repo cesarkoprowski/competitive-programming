@@ -1,35 +1,58 @@
-# Prerequisites
-*.d
+# ----------------------------------------
+# CLion / JetBrains
+# ----------------------------------------
+.idea/
+cmake-build-*/       # CLion build folders (Debug/Release/etc)
+*.iml
 
-# Compiled Object files
-*.slo
-*.lo
+# ----------------------------------------
+# CMake
+# ----------------------------------------
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json   # opcional (às vezes não ignorar é útil)
+CTestTestfile.cmake
+
+# ----------------------------------------
+# Build artifacts
+# ----------------------------------------
 *.o
 *.obj
-
-# Precompiled Headers
+*.lo
+*.slo
 *.gch
 *.pch
 
-# Compiled Dynamic libraries
+# ----------------------------------------
+# Compiled libraries
+# ----------------------------------------
 *.so
 *.dylib
 *.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
 *.lib
+*.a
+*.la
+*.lai
 
-# Executables
+# ----------------------------------------
+# Executáveis
+# ----------------------------------------
 *.exe
 *.out
 *.app
 
-# VS Code
-/.vscode/
+# ----------------------------------------
+# VSCode (se você quiser ignorar mesmo)
+.vscode/
+
+# ----------------------------------------
+# Misc
+# ----------------------------------------
+*.d
+*.mod
+*.smod
