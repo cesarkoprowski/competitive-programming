@@ -21,5 +21,6 @@ foreach(SOURCE_FILE ${ALL_CPP_FILES})
             codeforces/41A/translation.cpp
             codeforces/41A/translation.cpp
             codeforces/41A/translation.cpp
-            codeforces/41A/translation.cpp)
+            codeforces/41A/translation.cpp
+            codeforces/677A/vanya-and-fence.cpp)
 endforeach()
